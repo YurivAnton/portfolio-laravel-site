@@ -25,6 +25,9 @@
 
 <section id="projects">
     <h2>Projects</h2>
+    <a href="{{ route('app.dashboard') }}">
+        Try Service Report App
+    </a>
 </section>
 
 <section>
