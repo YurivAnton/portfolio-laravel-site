@@ -29,4 +29,19 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function serviceReportUserRole()
+    {
+        return $this->hasOne(ServiceReportUserRole::class);
+    }
+
+    public function userRoles()
+    {
+        return $this->hasMany(ServiceReportUserRole::class);
+    } 
+
+    public function serviceReports()
+    {
+        return $this->belongsToMany(ServiceReport::class, 'service_report_user_roles')->withPivot('role');
+    }
 }
