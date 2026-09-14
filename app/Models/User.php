@@ -30,11 +30,6 @@ class User extends Authenticatable
         ];
     }
 
-    public function serviceReportUserRole()
-    {
-        return $this->hasOne(ServiceReportUserRole::class);
-    }
-
     public function userRoles()
     {
         return $this->hasMany(ServiceReportUserRole::class);
